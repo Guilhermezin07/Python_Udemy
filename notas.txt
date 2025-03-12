@@ -1,0 +1,366 @@
+[AULA 1]
+# -> serve para fazer comentarios em python
+#ele ignora as linhas com hashtag
+
+print("oi") -> essa linha será lida
+
+#Comentários tambem podem ser feitos abaixo da linha
+
+"""comentarios escritos aqui dentro sao chamados de 
+docstring que servem como se fosse comentarios pulando linhas """
+
+[AULA 2]
+print (12, 34) -> os valores que estao dentro dos parenteses sao 
+chamados de "argumentos nao nomeados" 
+sep= -> argumento usado para separar os caracteres
+sep=" "
+print(12,34, sep=" - ")
+
+[AULA 3]
+Python é uma linguagem de programação de tipagem dinamica e forte
+- Strings são textos que estão dentro de aspas 
+- O python atribui dinamicamente e reconhece string e numeros inteiros 
+#Escape -> um caractere que permite ignorar as aspas dentro do
+parenteses 
+
+[AULA 4]
+int -> numeros inteiros
+float -> numeros com ponto flutuante
+# positivo ou negativo com ponto flutuante
+# float sem sinal é considerado positivo
+
+bool -> operadores lógicos (sim)True ou (nao)False
+"==" ->confere se um valor é igual ao outro
+print(10 == 10) => True 
+print(10 == 20) => False
+
+# A função type serve para mostrar o tipo que inferiu ao valor
+# Se tem letra minuscula e parenteses é uma função 
+Ex: print(), input(), type(class)
+#Tudo em python é considerado um objeto:
+<class 'str'>
+<class 'int'>
+<class 'float'>
+<class 'bool'>
+
+Conversao de tipos, coercion
+type convertion, typecasting, coercion
+é o ato de converter um tipo em outro
+
+# tipos imutaveis e primitivos :
+-> str, int, float, bool
+# Python nao consegue concatenar string com inteiros sem a 
+declaração do tipo
+ex : ("1" + 2)
+
+[AULA 7]
+Variaveis sao usadas para salvar algo na memoria do computador.
+#PEP8: iniciar variaveis com letras minusculas, numeros e underlines
+-> o sinal de "=" usado para atribuir um valor a um nome 
+ex: nome = 'guilherme'
+idade = '20'
+maior_idade = if idade >= 18
+print("idade:", idade)
+
+[AULA 8]
+Operadores Matematicos em python:
+10 + 10 = 20 (adição)
+10 - 5  = 5 (subtração)
+10 * 10 = 100 (multiplicação)
+10 / 2.2 = 4.54545 (Divisao)
+10 // 2.2 = 4.0 (Divisao inteira)
+2 ** 10 = 1024 (exponenciação)
+55 % 2 = 1 (módulo # resto da divisao)
+
+number = int(input("Digite o valor: "))
+
+if number % 2 == 0:
+print(f'O número {number} é par!')
+
+else:
+print(f'O número {number} é ímpar!')
+
+ print(10 % 8 == 0)
+
+Precedencia na hora de execução :
+# 1. (n + n) parenteses internos sao executados primeiro 
+# 2. **
+# 3. * / // %
+# 4. + -
+conta_1 = 1 + 1 ** 5 + 5 -> 7
+conta_2 = (1 + 1) ** (5 + 5) -> 1024
+conta_3 = 1 + (0.5 + 0.5) ** 5 + 5 ->
+
+[AULA 9]
+Formatação de Strings:
+s -> string
+d -> int
+f -> float
+.< >f
+x -> hexadecimal
+
+
+
+linha_1 = f' {nome} tem {altura:.2f} de altura'
+
+Função Input()
+#coleta dados e armazena em uma variavel do tipo string 
+# f'digite seu nome {nome}'
+{numero1 + numero2} -> resulta em uma string 1+5 = 15
+{int(numero1) + int(numero2)} -> 1+5 = 6
+
+[AULA 10]
+#Operadores logicos
+and(e), or(ou), not(nao)
+and -> so vai ser verdadeiro quando tudo for verdadeiro
+- usado para checar mais de uma expressao 
+- se um valor da expressao for considerado, a expressao sera falsa
+or -> se qualquer valor for verdadeiro, a expressao sera verdadeira
+- print(0 or 1) = verdadeiro
+- print(True or False) = verdadeiro
+
+Tipo None -> usado para representar um nao valor
+not -> as expressoes sao invertidas
+- not True = False
+- not False = True
+
+#Operadores in e not in 
+- strings sao iteraveis
+- 0 1 2 3 4 5
+- o t a v i o 
+- 6 5 4 3 2 1
+
+nome = 'otavio'
+print(nome[2]) -> "a" de otavio
+print(nome[1]) -> "t" de otavio
+#para checar se uma string esta em uma determinada variavel basta:
+print("vio" in nome) -> vai procurar string "vio" em otavio, se tiver 
+vai validar como "True", se nao tiver vai ser "false"
+print("zero" in nome) -> nesse caso aqui é false
+
+#o not in é a mesma coisa so que ao contrario, o que for true = false
+e o que for false = true
+print("vio" not in nome) -> false 
+print("zero" not in nome) -> true
+
+
+
+[AULA 11]
+# interpolacao basica de strings
+nome = guilherme
+preco = 1000.30
+variavel = '%s, o preco e %f' %(nome, preco)
+print(variavel)
+%s -> string
+d, i -> int
+%f -> float
+%x, X -> hexadecimal
+
+Fatiamento de strings
+0123456789
+-987654321
+fatiamento [i:f:p] [::] inicio, fim, passo
+Obs: a função len retorna a quantidade de caracteres str """
+#Em python o indice final normalmente nao e incluido 
+
+variavel = 'ola mundo'
+print(variavel[4:8]) # resultado = mund
+print(variavel[4:]) # resultado = mundo
+print(variavel[0:5])# resultado = ola m 
+# o espaço tambem conta como caractere
+print(len(variavel))
+print(variavel[0:9:2])#pega todos os caracteres do indice 0 ao 9
+pulando de 2 em 2 que resulta em = oamno 
+print(variavel[-1:-10:-1])#pega todos os caractere de tras pra frente
+
+#Avaliacao de curto circuito:
+variavel = input('digite seu nome' ) or 'oi'
+print(variavel)
+-> se voce digitar vai seguir o fluxo normalmente
+-> se voce apertar enter direito ele mostra a outra opcao
+
+[AULA 12]
+# try/except
+try - tentar executar o codigo
+except - ocorreu algum erro ao tentar executar """
+Except = "ValueError" -> nao e possivel converter string para int
+{numero * 2} -> string multiplicando numero resulta em repeticao
+numero = 2
+numero * 2 -> 22
+- temos que converter numero em float ou int para que seja realizada a 
+operacao
+-> numero_float = float(numero)
+print('{numero_float * 2:.2f}') -> numero * 2 = 4
+
+numero_str = input('vou dobrar o numero que voce digitar')
+print(numero_str.isdigit()) #-> verifica se usuario digitou apenas numeros
+
+if numero_str.isdigit(): #checa a condicao e muda o fluxo
+    numero_float = float(numero_str)
+    print(f'o dobro de {numero_str} e {numero_float * 2:.2f}')
+else:
+    print('isso nao e um numero')
+
+- Utilizando o 'try' temos:
+numero_str = input('vou dobrar o numero que voce digitar')
+
+try:
+    print('str':, numero_str)
+    numero_float = float(numero_str)
+    print('float:', numero_float)
+    print(f'o dobro de {numero_str} e {numero_float * 2:.2f}')
+except:
+     print('isso nao e um numero')
+
+
+Constante = sao 'variaveis' que nao vao mudar, inicia uma variavel 
+com nome maiusculo
+#Muitas condicoes no mesmo if (ruim)
+    <- contagem de complexidade (ruim)
+
+
+[AULA 13]
+Flags(bandeira) -> Marcar um local
+none = valor nulo
+is e is not = e ou nao e (tipo, valor, identidada)
+id = identidade
+
+-Fincando uma bandeira em um determinado local do codigo e 
+usando none para dizer se essa variavel tem ou nao valor
+e se bandeira esta ou nao fincada 
+
+'' '' '' 
+condicao = True 
+passou_no_if = None
+
+if condicao:
+    passou_no_if = True
+    print('faca algo')
+else:
+    print('nao faca nada')
+
+print(passou_no_if, passou_no_if is None)
+print(passou_no_if, passou_no_if is not None)
+
+
+# Tipos embutidos em python:
+-> string, int, bool, float (tipos imutaveis e todos sao objetos)
+print(string)
+print string. -> apresenta metodos em string 
+print(string.zfill(100)) -> serve para preencher a string 
+com mais caracteres, no caso 100 caracteres do exemplo
+
+{Aula 14}
+# While (enquanto) -> executa algo quando condicao for verdadeira
+# loop infinito = codigo sem fim
+condicao = true
+while condicao:
+    print(123)
+    nome = input('qual seu nome ')
+    print(f'seu nome e {nome}')
+
+# Apertar ctrl + c no terminal, o loop se encerra
+# utilize 'break' para quebrar o loop
+ 
+ contador = 0 
+ while contador < 10:
+    contador = contador + 1
+    print('eita')
+
+{Aula 15}
+#Operadores de atribuicao com operadores aritmeticos:
+# =, +=, -=, *=, /=, //=, **=, %=
+
+contador = 0
+
+while contador <= 10:
+    contador = contador + 1
+    print(contador)
+
+contador += 1
+contador += '4'
+
+break e continue sao usadas para while que tiver mais proximo delas
+break para a repeticao e o continue pula 
+
+
+Aula 16 - While e else 
+
+#16 de dezembro de 2024 
+-> preciso retomar os estudos de python, para prosseguir em minha carreira
+
+- Introdução ao For (Para) / In ( em )
+
+#for e range 
+#range -> (start, stop, step)
+# for puxa os valores iteraveis e while puxa o indice e dps o valor 
+
+num = range(0, 100, 9)
+
+for numeros in num:
+    print(numeros)
+
+iteravel -> str, range, etc (metodo dentro dele -> (__iter__))
+iterador -> quem sabe entregar um valor por vez
+next -> me entregue o proximo valor
+iter -> me entregue seu iterador
+
+iter('nome') = __iter__()
+
+for i in range(10):
+    if i == 2:
+        print('i e 2, pulando')
+        continue
+    
+    if i == 9:
+        print('i e 9, seu else nao executara)
+        break
+    
+    for j in range(1, 3):
+        print(i, j)
+else:
+    print('for completo com sucesso')
+
+exe - 25
+
+"""
+Faça um jogo para o usuário adivinhar qual
+a palavra secreta.
+- Você vai propor uma palavra secreta
+qualquer e vai dar a possibilidade para
+o usuário digitar apenas uma letra.
+- Quando o usuário digitar uma letra, você 
+vai conferir se a letra digitada está
+na palavra secreta.
+    - Se a letra digitada estiver na
+    palavra secreta; exiba a letra;
+    - Se a letra digitada não estiver
+    na palavra secreta; exiba *.
+Faça a contagem de tentativas do seu
+usuário.
+"""
+
+* LISTAS * 
+
+-tipo list - mutavel 
+- suporta varios valores de qualquer tipo 
+- reutilizar -> indices e Fatiamento
+- Metodos uteis : append, insert, pop, del, clear, extend, +
+
+
+dados de entrada :
+- nome  -> string do que vai ser adicionado a LISTA
+[i]nserir
+[a]pagar
+[l]listar
+
+input - selecione uma opcao
+
+inserir
+    lista.insert(0, item)
+apagar
+listar
+
+
+
+
