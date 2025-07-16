@@ -18,8 +18,8 @@ carro_multado_radar_1 = carro_passou_radar_1 and vel_carro_pass_radar_1
 if vel_carro_pass_radar_1:
     print('voce passou do limite do radar 1')
 
-if carro_passou_radar_1:
+elif carro_passou_radar_1:
     print('carro passou pelo radar 1 e esta dentro do limite')
 
-if carro_multado_radar_1:
+elif carro_multado_radar_1:
     print('carro foi multado no radar 1')
